@@ -7,10 +7,6 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 SCRIPT_FOLDER = os.path.join(BASE_DIR, "../scripts/")
 
-print(BASE_DIR)
-print(SCRIPT_FOLDER)
-
-
 def restart_bot():
     subprocess.call(["sh", f"{SCRIPT_FOLDER}restartbot.sh"])
 
