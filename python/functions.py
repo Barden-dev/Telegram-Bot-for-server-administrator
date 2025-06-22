@@ -37,7 +37,7 @@ def get_server_stats():
     ram_used = memory.used / (1024 * 1024)    # Занято ОЗУ в МБ
     ram_free = memory.available / (1024 * 1024)  # Свободно ОЗУ в МБ
 
-    # Температура процессора (работает на большинстве Linux-систем)
+    # Температура процессора
     try:
         temp = psutil.sensors_temperatures()['coretemp'][0].current
     except:
@@ -47,7 +47,6 @@ def get_server_stats():
     disk = psutil.disk_usage('/')
     disk_free = disk.free / (1024 * 1024 * 1024)  # Свободно в ГБ
 
-    # Формируем сообщение
     stats = (
         f"📊 Состояние сервера:\n"
         f"CPU: {cpu_load}%\n"
