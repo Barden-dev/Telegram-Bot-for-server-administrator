@@ -1,5 +1,5 @@
 #!/bin/bash
 
-runuser -l srvroot -c 'ddev restart joomla-project'
+#this file here only for testing
 
 
