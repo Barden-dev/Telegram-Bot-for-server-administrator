@@ -16,7 +16,7 @@ async def main():
     dp = Dispatcher(storage=MemoryStorage())
     dp.include_router(router)
 
-    await bot.send_message(1253453225, "Сервер/Бот запущен")
+    await bot.send_message(config.ADMINS[0], "Сервер/Бот запущен")
     
     await dp.start_polling(bot, allowed_updates=dp.resolve_used_update_types(), handle_signals=False)
     
